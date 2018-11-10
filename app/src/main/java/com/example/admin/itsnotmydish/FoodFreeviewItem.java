@@ -1,18 +1,16 @@
 package com.example.admin.itsnotmydish;
 
-import android.widget.ImageView;
-
 public class FoodFreeviewItem {
     private String Food_name;
     private String Distance;
     private String Person_name;
-    private ImageView Food_image;
+    private String Food_image_URL;
 
-    FoodFreeviewItem(String Food_name, String Distance, String Person_name, ImageView Food_image) {
+    FoodFreeviewItem(String Food_name, String Distance, String Person_name, String Food_image) {
         this.Food_name = Food_name;
         this.Distance = Distance;
         this.Person_name = Person_name;
-        this.Food_image = Food_image;
+        this.Food_image_URL = Food_image;
 
     }
 
@@ -46,13 +44,13 @@ public class FoodFreeviewItem {
 
     }
 
-    public ImageView getFood_image() {
-        return Food_image;
+    public String getFood_image_URL() {
+        return Food_image_URL;
 
     }
 
-    public void setFood_image(ImageView food_image) {
-        Food_image = food_image;
+    public void setFood_image_URL(String food_image_URL) {
+        Food_image_URL = food_image_URL;
 
     }
 

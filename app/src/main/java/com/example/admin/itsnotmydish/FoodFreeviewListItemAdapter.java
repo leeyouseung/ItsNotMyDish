@@ -2,6 +2,8 @@ package com.example.admin.itsnotmydish;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +60,7 @@ public class FoodFreeviewListItemAdapter extends BaseAdapter {
         food_name.setText(foodFreeviewItem.getFood_name());
         distance.setText(foodFreeviewItem.getDistance());
         person_name.setText(foodFreeviewItem.getPerson_name());
-        Glide.with(context).load(foodFreeviewItem.getFood_image()).into(food_image);
+        Glide.with(context).load(foodFreeviewItem.getFood_image_URL()).into(food_image);
 
         return convertView;
     }

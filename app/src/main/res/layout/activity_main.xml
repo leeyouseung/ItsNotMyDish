@@ -8,81 +8,134 @@
     android:background="#F2F2F2"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/Logout_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:onClick="LogoutButton"
-        android:scaleType="centerInside"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoutbutton"
-        tools:ignore="ContentDescription" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
 
-    <ImageView
-        android:id="@+id/Alram_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/alrambutton"
-        tools:ignore="ContentDescription" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/Map_Buton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logout_Button"
-        app:srcCompat="@drawable/mapbutton"
-        tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/Logout_Button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="LogoutButton"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logoutbutton"
+                tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:id="@+id/List_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toEndOf="@+id/Map_Buton"
-        app:layout_constraintTop_toBottomOf="@+id/Logout_Button"
-        app:srcCompat="@drawable/listbutton"
-        tools:ignore="ContentDescription" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="4"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf"> </LinearLayout>
 
-    <ImageView
-        android:id="@+id/Mypage_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Alram_Button"
-        app:srcCompat="@drawable/mypage"
-        tools:ignore="ContentDescription" />
+            <ImageView
+                android:id="@+id/Alram_Button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="AlramButton"
+                android:scaleType="centerInside"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/alrambutton"
+                tools:ignore="ContentDescription,RtlCompat" />
 
-    <ListView
-        android:layout_width="395dp"
-        android:layout_height="506dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Map_Buton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Map_Buton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="MapButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Logout_Button"
+                app:srcCompat="@drawable/mapbutton"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <ImageView
+                android:id="@+id/List_Button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="ListButton"
+                app:layout_constraintStart_toEndOf="@+id/Map_Buton"
+                app:layout_constraintTop_toBottomOf="@+id/Logout_Button"
+                app:srcCompat="@drawable/listbutton"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="3"
+                android:background="#FFFFFF"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf"
+                android:layout_marginStart="5dp"> </LinearLayout>
+
+            <ImageView
+                android:id="@+id/Mypage_Button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:onClick="MypageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Alram_Button"
+                app:srcCompat="@drawable/mypage"
+                tools:ignore="ContentDescription"
+                android:layout_marginStart="5dp" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/Food_freeview_List"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Map_Buton" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
