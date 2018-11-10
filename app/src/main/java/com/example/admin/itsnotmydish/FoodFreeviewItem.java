@@ -1,6 +1,11 @@
 package com.example.admin.itsnotmydish;
 
-public class FoodFreeviewItem {
+import java.io.Serializable;
+
+public class FoodFreeviewItem implements Serializable {
+
+    public long SerialVersionUID = 2L;
+
     private String Food_name;
     private String Distance;
     private String Person_name;

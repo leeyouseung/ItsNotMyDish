@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FoodFreeviewListItemAdapter.ItemSeleted{
 
     List<FoodFreeviewItem> foodList;
     FoodFreeviewListItemAdapter foodFreeviewListItemAdapter;
@@ -19,13 +20,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView img = (ImageView) findViewById(R.id.Map_Buton);
-        img.setOnClickListener(new View.OnClickListener() {
+
+        ImageView mapbutton = findViewById(R.id.Map_Buton);
+        mapbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MainMapActivity.class);
                 startActivity(intent);
+
             }
         });
+
         foodList = new ArrayList<>();
 
         ListView foodListView = findViewById(R.id.Food_freeview_List);
@@ -74,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
     public void ListButton(View v) {
         Toast toast = Toast.makeText(this, "리스트 버튼 입니다.", Toast.LENGTH_SHORT);
         toast.show();
+
+    }
+
+    @Override
+    public void selectItem(int pos) {
+        Intent intent = new Intent(this, subImpormation.class);
+        intent.putExtra("ListData",foodList.get(pos));
+        startActivity(intent);
 
     }
 
