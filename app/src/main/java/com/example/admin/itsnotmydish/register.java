@@ -8,21 +8,21 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
-import java.net.URLDecoder;
-import java.util.ArrayList;
-
-import cz.msebera.android.httpclient.HttpResponse;
-import cz.msebera.android.httpclient.NameValuePair;
-import cz.msebera.android.httpclient.client.ClientProtocolException;
-import cz.msebera.android.httpclient.client.HttpClient;
-import cz.msebera.android.httpclient.client.entity.UrlEncodedFormEntity;
-import cz.msebera.android.httpclient.client.methods.HttpPost;
-import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
-import cz.msebera.android.httpclient.message.BasicNameValuePair;
+//
+//import java.io.IOException;
+//import java.io.UnsupportedEncodingException;
+//import java.net.MalformedURLException;
+//import java.net.URLDecoder;
+//import java.util.ArrayList;
+//
+//import cz.msebera.android.httpclient.HttpResponse;
+//import cz.msebera.android.httpclient.NameValuePair;
+//import cz.msebera.android.httpclient.client.ClientProtocolException;
+//import cz.msebera.android.httpclient.client.HttpClient;
+//import cz.msebera.android.httpclient.client.entity.UrlEncodedFormEntity;
+//import cz.msebera.android.httpclient.client.methods.HttpPost;
+//import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
+//import cz.msebera.android.httpclient.message.BasicNameValuePair;
 
 public class register extends AppCompatActivity {
 
