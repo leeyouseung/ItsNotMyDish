@@ -22,6 +22,7 @@ public class FoodFreeviewListItemAdapter extends BaseAdapter {
 
     public interface ItemSeleted {
         public void selectItem(int pos);
+
     }
 
     FoodFreeviewListItemAdapter(Context context, List<FoodFreeviewItem> foodFreeviewItem) {
@@ -69,7 +70,7 @@ public class FoodFreeviewListItemAdapter extends BaseAdapter {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(context instanceof MainActivity){
+                if(context instanceof MainActivity) {
                     ((MainActivity)context).selectItem(position);
 
                 }

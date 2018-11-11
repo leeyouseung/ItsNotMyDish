@@ -1,5 +1,6 @@
 package com.example.admin.itsnotmydish;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +12,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements FoodFreeviewListItemAdapter.ItemSeleted{
+@SuppressLint("Registered")
+public class MainActivity extends AppCompatActivity implements FoodFreeviewListItemAdapter.ItemSeleted {
 
     List<FoodFreeviewItem> foodList;
     FoodFreeviewListItemAdapter foodFreeviewListItemAdapter;
@@ -52,8 +54,7 @@ public class MainActivity extends AppCompatActivity implements FoodFreeviewListI
         Toast toast = Toast.makeText(this, "로그아웃 되었습니다.", Toast.LENGTH_SHORT);
         toast.show();
 
-        //Intent intent = new Intent();
-        //startActivity(intent);
+        finish();
 
     }
 
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements FoodFreeviewListI
     @Override
     public void selectItem(int pos) {
         Intent intent = new Intent(this, subImpormation.class);
-        intent.putExtra("ListData",foodList.get(pos));
+        intent.putExtra("ListData", foodList.get(pos));
         startActivity(intent);
 
     }

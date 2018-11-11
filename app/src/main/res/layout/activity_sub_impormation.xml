@@ -150,15 +150,11 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <ListView
+            android:id="@+id/food_image_list2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
+            android:orientation="horizontal" />
 
     </LinearLayout>
 
