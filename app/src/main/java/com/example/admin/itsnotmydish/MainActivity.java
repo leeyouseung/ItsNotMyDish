@@ -46,21 +46,20 @@ public class MainActivity extends AppCompatActivity implements FoodFreeviewListI
         foodListView.setAdapter(foodFreeviewListItemAdapter);
 
         foodListView.getAdapter().getItem(0);
-
     }
 
     public void LogoutButton(View v) {
+
         Toast toast = Toast.makeText(this, "로그아웃 되었습니다.", Toast.LENGTH_SHORT);
         toast.show();
 
         finish();
-
     }
 
     public void AlramButton(View v) {
+
         Toast toast = Toast.makeText(this, "알람 버튼 입니다.", Toast.LENGTH_SHORT);
         toast.show();
-
     }
 
     public void MapButton(View v) {
